@@ -32,9 +32,8 @@ def watch_movie(user_data, title):
     return user_data
 
 
-# -----------------------------------------
 # ------------- WAVE 2 --------------------
-# -----------------------------------------
+
 def get_watched_avg_rating(user_data):
     total = 0.0
 
@@ -68,9 +67,8 @@ def get_most_watched_genre(user_data):
     return most_watched
 
 
-# -----------------------------------------
 # ------------- WAVE 3 --------------------
-# -----------------------------------------
+
 def get_unique_watched(user_data):
     unique_watched = copy.deepcopy(user_data["watched"])
 
@@ -92,10 +90,9 @@ def get_friends_unique_watched(user_data):
 
     return unique_watched
 
-        
-# -----------------------------------------
+
 # ------------- WAVE 4 --------------------
-# -----------------------------------------
+
 def get_available_recs(user_data):
     friends_recs = get_friends_unique_watched(user_data)
     available_recs = []
@@ -106,9 +103,9 @@ def get_available_recs(user_data):
 
     return available_recs
 
-# -----------------------------------------
+
 # ------------- WAVE 5 --------------------
-# -----------------------------------------
+
 def get_new_rec_by_genre(user_data):
     friends_recs = get_friends_unique_watched(user_data)
     user_fav_genre = get_most_watched_genre(user_data)
