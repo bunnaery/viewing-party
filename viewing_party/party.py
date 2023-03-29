@@ -73,7 +73,7 @@ def get_unique_watched(user_data):
     unique_watched = copy.deepcopy(user_data["watched"])
 
     for friend in user_data["friends"]:
-        for movie in friend["watched"][::-1]:
+        for movie in friend["watched"]:
             if movie in unique_watched:
                 unique_watched.remove(movie)
 
